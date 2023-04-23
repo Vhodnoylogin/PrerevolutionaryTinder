@@ -76,7 +76,7 @@ public class TinderHandler extends TelegramLongPollingBot {
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         sendMessage.setReplyToMessageId(message.getMessageId());
         sendMessage.setChatId(message.getChatId());
-        sendMessage.setText("Любимцы");
+        sendMessage.setText("Можно просмотреть анкеты людей, которые нравились вам, выбрали вас или был взаимный выбор.");
         STATE = LIKE_FORM;//DatabaseManager.getInstance().insertState(message.getFrom().getId(), message.getChatId(), MAINMENU);
         return sendMessage;
     }
@@ -88,7 +88,7 @@ public class TinderHandler extends TelegramLongPollingBot {
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         sendMessage.setReplyToMessageId(message.getMessageId());
         sendMessage.setChatId(message.getChatId());
-        sendMessage.setText("Поиск");
+        sendMessage.setText("Можно просмотреть анкеты людей, которые совпадают по обоюдному поисковому критерию");
         STATE = FIND_FORM;//DatabaseManager.getInstance().insertState(message.getFrom().getId(), message.getChatId(), MAINMENU);
         return sendMessage;
     }
@@ -100,7 +100,7 @@ public class TinderHandler extends TelegramLongPollingBot {
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         sendMessage.setReplyToMessageId(message.getMessageId());
         sendMessage.setChatId(message.getChatId());
-        sendMessage.setText("Анкета");
+        sendMessage.setText("Текущая анкета, а если её нет, то надо заполнить");
         STATE = QUEST_FORM;//DatabaseManager.getInstance().insertState(message.getFrom().getId(), message.getChatId(), MAINMENU);
         return sendMessage;
     }

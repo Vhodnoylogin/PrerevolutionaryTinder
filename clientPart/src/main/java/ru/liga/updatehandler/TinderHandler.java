@@ -52,7 +52,7 @@ public class TinderHandler extends TelegramLongPollingBot {
     private SendMessage sendMessageDefault(Message message) {
         ReplyKeyboardMarkup replyKeyboardMarkup = getMainMenuKeyboard();
         STATE = MAIN_MENU;//DatabaseManager.getInstance().insertState(message.getFrom().getId(), message.getChatId(), MAINMENU);
-        return sendHelpMessage(message.getChatId(), message.getMessageId(), replyKeyboardMarkup);
+        return sendHelpMessage(message.getChatId(), replyKeyboardMarkup);
     }
 
     private SendMessage messageOnMainMenu(Message message) {
@@ -224,7 +224,7 @@ public class TinderHandler extends TelegramLongPollingBot {
         return replyKeyboardMarkup;
     }
 
-    private static SendMessage sendHelpMessage(Long chatId, Integer messageId, ReplyKeyboardMarkup replyKeyboardMarkup) {
+    private static SendMessage sendHelpMessage(Long chatId, ReplyKeyboardMarkup replyKeyboardMarkup) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.enableMarkdown(true);
         sendMessage.setChatId(chatId);

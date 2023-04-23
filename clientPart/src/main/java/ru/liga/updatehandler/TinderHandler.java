@@ -160,8 +160,6 @@ public class TinderHandler extends TelegramLongPollingBot {
         return BotConfig.BOT_NAME;
     }
 
-
-
     private ReplyKeyboardMarkup getMainMenuKeyboard() {
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
         replyKeyboardMarkup.setSelective(true);

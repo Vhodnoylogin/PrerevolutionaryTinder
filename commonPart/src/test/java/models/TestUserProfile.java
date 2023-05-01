@@ -1,14 +1,11 @@
 package models;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.Data;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j

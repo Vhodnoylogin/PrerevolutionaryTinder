@@ -14,13 +14,12 @@ public class GenderEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "gender")
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_profile_id")
-    private UserProfileEntity userProfile;
+    private UserProfileEntity userProfileEntity;
 
     @Override
     public boolean equals(Object o) {

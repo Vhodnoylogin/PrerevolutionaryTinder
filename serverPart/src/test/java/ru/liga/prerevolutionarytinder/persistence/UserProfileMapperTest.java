@@ -67,14 +67,14 @@ public class UserProfileMapperTest {
 
         var genderFE = new GenderEntity();
         genderFE.setGender(Gender.FEMALE);
-        genderFE.setUserProfile(testUserProfileEntity);
+        genderFE.setUserProfileEntity(testUserProfileEntity);
         var genderOE = new GenderEntity();
         genderOE.setGender(Gender.OTHER);
-        genderOE.setUserProfile(testUserProfileEntity);
+        genderOE.setUserProfileEntity(testUserProfileEntity);
         var genderEList = Arrays.asList(genderFE, genderOE);
 
-        testUserProfileEntity.setDescription(descriptionE);
-        testUserProfileEntity.setPersonInfo(personInfoEntity);
+        testUserProfileEntity.setDescriptionEntity(descriptionE);
+        testUserProfileEntity.setPersonInfoEntity(personInfoEntity);
         testUserProfileEntity.setLookingFor(genderEList);
 
         assertThat(userProfileEntity)
@@ -102,14 +102,14 @@ public class UserProfileMapperTest {
 
         var genderFE = new GenderEntity();
         genderFE.setGender(Gender.FEMALE);
-        genderFE.setUserProfile(userProfileE);
+        genderFE.setUserProfileEntity(userProfileE);
         var genderOE = new GenderEntity();
         genderOE.setGender(Gender.OTHER);
-        genderOE.setUserProfile(userProfileE);
+        genderOE.setUserProfileEntity(userProfileE);
         var genderEList = Arrays.asList(genderFE, genderOE);
 
-        userProfileE.setPersonInfo(personInfoE);
-        userProfileE.setDescription(descriptionE);
+        userProfileE.setPersonInfoEntity(personInfoE);
+        userProfileE.setDescriptionEntity(descriptionE);
         userProfileE.setLookingFor(genderEList);
 
         var userProfile = userProfileMapper.mapToDto(userProfileE);
@@ -119,12 +119,12 @@ public class UserProfileMapperTest {
         var testUserProfile = new UserProfile();
 
         var personInfo = new PersonInfo();
-        personInfo.setGender(userProfileE.getPersonInfo().getGender());
-        personInfo.setLastName(userProfileE.getPersonInfo().getLastName());
-        personInfo.setFirstName(userProfileE.getPersonInfo().getFirstName());
+        personInfo.setGender(userProfileE.getPersonInfoEntity().getGender());
+        personInfo.setLastName(userProfileE.getPersonInfoEntity().getLastName());
+        personInfo.setFirstName(userProfileE.getPersonInfoEntity().getFirstName());
 
         var description = new Description();
-        description.setText(userProfileE.getDescription().getText());
+        description.setText(userProfileE.getDescriptionEntity().getText());
 
         var genderList = userProfileE.getLookingFor()
                 .stream()

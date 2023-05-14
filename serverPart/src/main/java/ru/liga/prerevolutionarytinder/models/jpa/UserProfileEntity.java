@@ -1,8 +1,8 @@
 package ru.liga.prerevolutionarytinder.models.jpa;
 
+
 import jakarta.persistence.*;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 import ru.liga.prerevolutionarytinder.models.jpa.inner.DescriptionEntity;
 import ru.liga.prerevolutionarytinder.models.jpa.inner.GenderEntity;
 import ru.liga.prerevolutionarytinder.models.jpa.inner.PersonInfoEntity;
@@ -10,7 +10,7 @@ import ru.liga.prerevolutionarytinder.models.jpa.inner.PersonInfoEntity;
 import java.util.List;
 
 @Entity
-//@MappedSuperclass
+@Table(name = "user_profile")
 @Data
 public class UserProfileEntity {
     @Id
@@ -19,12 +19,12 @@ public class UserProfileEntity {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "person_info_id", referencedColumnName = "id")
-    private PersonInfoEntity personInfo;
+    private PersonInfoEntity personInfoEntity;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "description_id", referencedColumnName = "id")
-    private DescriptionEntity description;
+    private DescriptionEntity descriptionEntity;
 
-    @OneToMany(mappedBy = "UserProfileEntity", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "userProfileEntity", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<GenderEntity> lookingFor;
 }

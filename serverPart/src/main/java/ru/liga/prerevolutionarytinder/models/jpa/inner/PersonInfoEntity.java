@@ -2,8 +2,8 @@ package ru.liga.prerevolutionarytinder.models.jpa.inner;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 import ru.liga.models.inner.Gender;
+import ru.liga.prerevolutionarytinder.models.jpa.UserProfileEntity;
 
 @Entity
 @Table(name = "person_info")
@@ -21,4 +21,27 @@ public class PersonInfoEntity {
 
     @Enumerated(EnumType.STRING)
     private Gender gender;
+
+    @OneToOne(mappedBy = "personInfoEntity")
+    private UserProfileEntity userProfileEntity;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof PersonInfoEntity that)) return false;
+
+        if (getFirstName() != null ? !getFirstName().equals(that.getFirstName()) : that.getFirstName() != null)
+            return false;
+        if (getLastName() != null ? !getLastName().equals(that.getLastName()) : that.getLastName() != null)
+            return false;
+        return getGender() == that.getGender();
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getFirstName() != null ? getFirstName().hashCode() : 0;
+        result = 31 * result + (getLastName() != null ? getLastName().hashCode() : 0);
+        result = 31 * result + (getGender() != null ? getGender().hashCode() : 0);
+        return result;
+    }
 }

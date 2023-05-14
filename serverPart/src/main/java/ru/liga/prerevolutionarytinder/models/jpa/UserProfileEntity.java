@@ -25,6 +25,6 @@ public class UserProfileEntity {
     @JoinColumn(name = "description_id", referencedColumnName = "id")
     private DescriptionEntity description;
 
-    @OneToMany(mappedBy = "userProfile", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "UserProfileEntity", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<GenderEntity> lookingFor;
 }

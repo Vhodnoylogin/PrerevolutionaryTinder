@@ -8,6 +8,7 @@ import ru.liga.prerevolutionarytinder.models.jpa.UserProfileEntity;
 @Entity
 @Table(name = "gender_list")
 @Data
+//@AllArgsConstructor
 public class GenderEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,4 +21,17 @@ public class GenderEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_profile_id")
     private UserProfileEntity userProfile;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof GenderEntity that)) return false;
+
+        return getGender() == that.getGender();
+    }
+
+    @Override
+    public int hashCode() {
+        return getGender().hashCode();
+    }
 }

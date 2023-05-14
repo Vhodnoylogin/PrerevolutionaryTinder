@@ -15,9 +15,5 @@ public class DescriptionEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-//    @OneToOne
-//    @JoinColumn(name = "user_profile_id")
-//    private UserProfileEntity userProfile;
-
     private String text;
 }

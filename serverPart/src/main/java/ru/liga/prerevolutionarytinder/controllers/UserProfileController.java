@@ -6,7 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.liga.models.UserProfile;
-import ru.liga.prerevolutionarytinder.models.jpa.UserProfileEntity;
+import ru.liga.prerevolutionarytinder.models.jpa.profiles.UserProfileEntity;
 import ru.liga.prerevolutionarytinder.servicies.UserProfileService;
 
 @Slf4j

@@ -9,10 +9,10 @@ import ru.liga.models.UserProfile;
 import ru.liga.models.inner.Description;
 import ru.liga.models.inner.Gender;
 import ru.liga.models.inner.PersonInfo;
-import ru.liga.prerevolutionarytinder.models.jpa.UserProfileEntity;
-import ru.liga.prerevolutionarytinder.models.jpa.inner.DescriptionEntity;
-import ru.liga.prerevolutionarytinder.models.jpa.inner.GenderEntity;
-import ru.liga.prerevolutionarytinder.models.jpa.inner.PersonInfoEntity;
+import ru.liga.prerevolutionarytinder.models.jpa.profiles.UserProfileEntity;
+import ru.liga.prerevolutionarytinder.models.jpa.profiles.inner.DescriptionEntity;
+import ru.liga.prerevolutionarytinder.models.jpa.profiles.inner.GenderEntity;
+import ru.liga.prerevolutionarytinder.models.jpa.profiles.inner.PersonInfoEntity;
 
 import java.util.Arrays;
 

@@ -1,9 +1,10 @@
-package ru.liga.prerevolutionarytinder.models.jpa.inner;
+package ru.liga.prerevolutionarytinder.models.jpa.profiles.inner;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 import ru.liga.models.inner.Gender;
-import ru.liga.prerevolutionarytinder.models.jpa.UserProfileEntity;
+import ru.liga.prerevolutionarytinder.models.jpa.profiles.UserProfileEntity;
 
 @Entity
 @Table(name = "person_info")
@@ -22,6 +23,7 @@ public class PersonInfoEntity {
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
+    @JsonBackReference
     @OneToOne(mappedBy = "personInfoEntity")
     private UserProfileEntity userProfileEntity;
 

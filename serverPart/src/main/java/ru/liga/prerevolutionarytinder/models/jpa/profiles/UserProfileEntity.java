@@ -1,11 +1,12 @@
-package ru.liga.prerevolutionarytinder.models.jpa;
+package ru.liga.prerevolutionarytinder.models.jpa.profiles;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
-import ru.liga.prerevolutionarytinder.models.jpa.inner.DescriptionEntity;
-import ru.liga.prerevolutionarytinder.models.jpa.inner.GenderEntity;
-import ru.liga.prerevolutionarytinder.models.jpa.inner.PersonInfoEntity;
+import ru.liga.prerevolutionarytinder.models.jpa.profiles.inner.DescriptionEntity;
+import ru.liga.prerevolutionarytinder.models.jpa.profiles.inner.GenderEntity;
+import ru.liga.prerevolutionarytinder.models.jpa.profiles.inner.PersonInfoEntity;
 
 import java.util.List;
 
@@ -17,14 +18,17 @@ public class UserProfileEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @JsonManagedReference
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "person_info_id", referencedColumnName = "id")
     private PersonInfoEntity personInfoEntity;
 
+    @JsonManagedReference
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "description_id", referencedColumnName = "id")
     private DescriptionEntity descriptionEntity;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "userProfileEntity", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<GenderEntity> lookingFor;
 }

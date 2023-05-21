@@ -3,12 +3,13 @@ package ru.liga.prerevolutionarytinder.models.jpa.profiles.inner;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
+import ru.liga.prerevolutionarytinder.models.jpa.help.BaseEntity;
 import ru.liga.prerevolutionarytinder.models.jpa.profiles.UserProfileEntity;
 
 @Entity
 @Table(name = "description")
 @Data
-public class DescriptionEntity {
+public class DescriptionEntity extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

@@ -9,6 +9,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "global_uuid_table")
+//@Table(name = "global_uuid_table", schema = "my_schema")
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class GlobalUUIDEntity extends BaseEntity {

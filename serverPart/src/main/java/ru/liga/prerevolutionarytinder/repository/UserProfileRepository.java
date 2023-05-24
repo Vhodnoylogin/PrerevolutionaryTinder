@@ -6,5 +6,4 @@ import ru.liga.prerevolutionarytinder.models.jpa.profiles.UserProfileEntity;
 
 @Repository
 public interface UserProfileRepository extends JpaRepository<UserProfileEntity, Long> {
-    // Дополнительные методы для работы с профилем пользователя, если необходимо
 }

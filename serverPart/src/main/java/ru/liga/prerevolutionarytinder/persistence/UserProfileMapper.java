@@ -9,11 +9,12 @@ import ru.liga.prerevolutionarytinder.models.jpa.profiles.UserProfileEntity;
 import ru.liga.prerevolutionarytinder.models.jpa.profiles.inner.DescriptionEntity;
 import ru.liga.prerevolutionarytinder.models.jpa.profiles.inner.GenderEntity;
 import ru.liga.prerevolutionarytinder.models.jpa.profiles.inner.PersonInfoEntity;
+import ru.liga.prerevolutionarytinder.persistence.common.DtoEntityMapper;
 
 import java.util.function.Function;
 
 @Component
-public class UserProfileMapper {
+public class UserProfileMapper implements DtoEntityMapper<UserProfile, UserProfileEntity> {
     public UserProfileEntity mapToEntity(UserProfile userProfile) {
         var userProfileEntity = new UserProfileEntity();
 

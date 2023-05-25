@@ -7,5 +7,5 @@ import ru.liga.models.auth.AuthPrincipleInfo;
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class TelegramRegistrationInfo extends AuthPrincipleInfo {
-    private Integer userId;
+    private Long userId;
 }

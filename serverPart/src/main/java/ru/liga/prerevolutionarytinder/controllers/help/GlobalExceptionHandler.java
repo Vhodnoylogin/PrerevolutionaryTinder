@@ -1,4 +1,4 @@
-package ru.liga.prerevolutionarytinder.controllers.service;
+package ru.liga.prerevolutionarytinder.controllers.help;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,11 +1,11 @@
-package ru.liga.prerevolutionarytinder.servicies;
+package ru.liga.prerevolutionarytinder.servicies.profiles;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.liga.models.UserProfile;
 import ru.liga.prerevolutionarytinder.models.jpa.profiles.UserProfileEntity;
 import ru.liga.prerevolutionarytinder.persistence.UserProfileMapper;
-import ru.liga.prerevolutionarytinder.repository.UserProfileRepository;
+import ru.liga.prerevolutionarytinder.repository.profiles.UserProfileRepository;
 
 @Service
 public class UserProfileService {

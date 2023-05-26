@@ -1,4 +1,4 @@
-package ru.liga.prerevolutionarytinder.repository;
+package ru.liga.prerevolutionarytinder.repository.profiles;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

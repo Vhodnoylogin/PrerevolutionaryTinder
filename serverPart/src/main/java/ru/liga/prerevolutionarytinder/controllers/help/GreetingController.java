@@ -1,4 +1,4 @@
-package ru.liga.prerevolutionarytinder.controllers.service;
+package ru.liga.prerevolutionarytinder.controllers.help;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

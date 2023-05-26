@@ -1,4 +1,4 @@
-package ru.liga.prerevolutionarytinder.controllers;
+package ru.liga.prerevolutionarytinder.controllers.profiles;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.liga.models.UserProfile;
 import ru.liga.prerevolutionarytinder.models.jpa.profiles.UserProfileEntity;
-import ru.liga.prerevolutionarytinder.servicies.UserProfileService;
+import ru.liga.prerevolutionarytinder.servicies.profiles.UserProfileService;
 
 @Slf4j
 @RestController

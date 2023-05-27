@@ -29,8 +29,8 @@ public class TelegramRegistrationService {
     public TelegramAuthEntity create(TelegramRegistrationInfo registrationInfo) {
         var telegramAuthEntity = telegramAuthMapper.mapToEntity(registrationInfo);
 
-//        var globalId = globalUUIDRepository.generateGlobalID();
-//        telegramAuthEntity.setGlobalUUIDEntity(globalId);
+        var globalId = globalUUIDRepository.generateGlobalID();
+        telegramAuthEntity.setGlobalUUIDEntity(globalId);
 
         return registrationRepository.save(telegramAuthEntity);
 //        return telegramAuthEntity;

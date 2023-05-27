@@ -6,7 +6,7 @@ import lombok.Data;
 import ru.liga.prerevolutionarytinder.models.jpa.help.BaseEntity;
 import ru.liga.prerevolutionarytinder.models.jpa.profiles.UserProfileEntity;
 
-@Entity
+//@Entity
 @Table(name = "description")
 @Data
 public class DescriptionEntity extends BaseEntity {

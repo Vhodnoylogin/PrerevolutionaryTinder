@@ -7,7 +7,7 @@ import ru.liga.models.inner.Gender;
 import ru.liga.prerevolutionarytinder.models.jpa.help.BaseEntity;
 import ru.liga.prerevolutionarytinder.models.jpa.profiles.UserProfileEntity;
 
-@Entity
+//@Entity
 @Table(name = "person_info")
 @Data
 public class PersonInfoEntity extends BaseEntity {

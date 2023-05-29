@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import ru.liga.prerevolutionarytinder.models.jpa.help.BaseEntity;
-import ru.liga.prerevolutionarytinder.models.jpa.keys.GlobalUserId;
 
 import java.util.UUID;
 
@@ -13,7 +12,7 @@ import java.util.UUID;
 //@Table(name = "global_uuid_table", schema = "my_schema")
 @Data
 @EqualsAndHashCode(callSuper = true)
-@IdClass(GlobalUserId.class)
+//@IdClass(GlobalUserId.class)
 public class GlobalUUIDEntity extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,6 +23,10 @@ public class GlobalUUIDEntity extends BaseEntity {
     private String uuid;
 
     public void setUuid() {
+        this.uuid = UUID.randomUUID().toString();
+    }
+
+    public GlobalUUIDEntity() {
         this.uuid = UUID.randomUUID().toString();
     }
 }

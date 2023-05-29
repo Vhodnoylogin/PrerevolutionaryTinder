@@ -21,5 +21,7 @@ public class GlobalUUIDRepositoryImpl implements GlobalUUIDCustomRepository {
         entityManager.refresh(globalId);
 
         return globalId;
+
+//        return this
     }
 }

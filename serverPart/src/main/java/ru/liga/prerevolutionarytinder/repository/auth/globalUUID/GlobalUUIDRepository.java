@@ -5,5 +5,6 @@ import org.springframework.stereotype.Repository;
 import ru.liga.prerevolutionarytinder.models.jpa.auth.GlobalUUIDEntity;
 
 @Repository
-public interface GlobalUUIDRepository extends JpaRepository<GlobalUUIDEntity, Long>, GlobalUUIDCustomRepository {
+//public interface GlobalUUIDRepository extends JpaRepository<GlobalUUIDEntity, Long>, GlobalUUIDCustomRepository {
+public interface GlobalUUIDRepository extends JpaRepository<GlobalUUIDEntity, Long> {
 }

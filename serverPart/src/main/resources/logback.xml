@@ -23,12 +23,12 @@
     <!-- Логгеры -->
     <root level="INFO">
         <appender-ref ref="console"/>
-        <appender-ref ref="errorFile"/>
+<!--        <appender-ref ref="errorFile"/>-->
     </root>
-
-    <logger name="ru.liga.karmatskiyrg" level="DEBUG">
+    <logger name="ru.liga.prerevolutionarytinder" level="DEBUG">
         <appender-ref ref="null"/>
-        <!--        <appender-ref ref="console" />-->
+        <appender-ref ref="errorFile"/>
+        <appender-ref ref="console"/>
     </logger>
 
 </configuration>

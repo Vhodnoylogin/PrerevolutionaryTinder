@@ -2,6 +2,7 @@ package ru.liga.prerevolutionarytinder.persistence.auth.telegram;
 
 import org.springframework.stereotype.Component;
 import ru.liga.models.auth.telegram.TelegramRegistrationInfo;
+import ru.liga.prerevolutionarytinder.models.jpa.auth.GlobalUUIDEntity;
 import ru.liga.prerevolutionarytinder.models.jpa.auth.telegram.TelegramAuthEntity;
 import ru.liga.prerevolutionarytinder.persistence.common.DtoEntityMapper;
 
@@ -11,6 +12,7 @@ public class TelegramAuthMapper implements DtoEntityMapper<TelegramRegistrationI
     public TelegramAuthEntity mapToEntity(TelegramRegistrationInfo dto) {
         var telegramAuthEntity = new TelegramAuthEntity();
         telegramAuthEntity.setUserId(dto.getUserId());
+        telegramAuthEntity.setGlobalUUIDEntity(new GlobalUUIDEntity());
         return telegramAuthEntity;
     }
 

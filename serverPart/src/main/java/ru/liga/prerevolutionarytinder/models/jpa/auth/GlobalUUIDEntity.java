@@ -8,7 +8,7 @@ import ru.liga.prerevolutionarytinder.models.jpa.help.BaseEntity;
 import java.util.UUID;
 
 @Entity
-@Table(name = "global_uuid_table")
+@Table(name = "GLOBAL_UUID_TABLE")
 //@Table(name = "global_uuid_table", schema = "my_schema")
 @Data
 @EqualsAndHashCode(callSuper = true)

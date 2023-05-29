@@ -6,6 +6,5 @@ import ru.liga.prerevolutionarytinder.models.jpa.auth.BaseAuthEntity;
 
 public interface RegistrationService<T extends AuthPrincipleInfo, R extends BaseAuthEntity> {
     R create(T authPrincipleInfo);
-
     SourceType getApplicableType();
 }

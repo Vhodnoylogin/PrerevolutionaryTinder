@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.liga.models.auth.telegram.TelegramRegistrationInfo;
+import ru.liga.models.auth.AuthPrincipleInfo;
 import ru.liga.prerevolutionarytinder.servicies.auth.RegistrationServiceFactory;
 import ru.liga.prerevolutionarytinder.servicies.auth.telegram.TelegramRegistrationService;
 
@@ -22,23 +22,32 @@ public class AuthController {
     @Autowired
 //    public AuthController(RegistrationServiceFactory registrationServiceFactory) {
 //        this.registrationServiceFactory = registrationServiceFactory;
+//        this.telegramRegistrationService = null;
 //    }
     public AuthController(TelegramRegistrationService telegramRegistrationService) {
         this.registrationServiceFactory = null;
         this.telegramRegistrationService = telegramRegistrationService;
     }
 
-    @PostMapping("/register")
-//    public ResponseEntity<String> createUserProfile(@RequestBody UserProfile userProfile) {
-//    public ResponseEntity<String> createUserProfile(@RequestBody AuthPrincipleInfo authPrincipleInfo) {
-    public ResponseEntity<String> createUserProfile(@RequestBody TelegramRegistrationInfo authPrincipleInfo) {
-        // код для сохранения профиля на сервере
-        log.info("{}", authPrincipleInfo);
-//        var res = registrationServiceFactory.createRegistrationService(authPrincipleInfo);
-//        var response = res.create(authPrincipleInfo);
+//    @PostMapping("/register")
+//    public ResponseEntity<String> registerNewUser(@RequestBody TelegramRegistrationInfo authPrincipleInfo) {
+//        // код для сохранения профиля на сервере
+//        if (telegramRegistrationService != null) {
+//            var response = telegramRegistrationService.create(authPrincipleInfo);
+//            return new ResponseEntity<>("Profile created successfully: " + response.toString(), HttpStatus.CREATED);
+//        }
+//        return new ResponseEntity<>("Input object is null: " + authPrincipleInfo.toString(), HttpStatus.NO_CONTENT);
+//    }
 
-        var response = telegramRegistrationService.create(authPrincipleInfo);
-//        return userProfileService.create(userProfile);
-        return new ResponseEntity<>("Profile created successfully: " + response.toString(), HttpStatus.OK);
+    @PostMapping("/register")
+    public <T extends AuthPrincipleInfo> ResponseEntity<String> registerNewUser(@RequestBody T authPrincipleInfo) {
+        // код для сохранения профиля на сервере
+        log.debug("{}", authPrincipleInfo);
+//        if (telegramRegistrationService != null) {
+//            var response = telegramRegistrationService.create((TelegramRegistrationInfo) authPrincipleInfo);
+//            return new ResponseEntity<>("Profile created successfully: " + response.toString(), HttpStatus.CREATED);
+//        }
+//        return new ResponseEntity<>("Input object is null: " + authPrincipleInfo.toString(), HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>("Input object =" + authPrincipleInfo.toString(), HttpStatus.OK);
     }
 }

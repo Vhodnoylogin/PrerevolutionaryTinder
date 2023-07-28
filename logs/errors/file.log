@@ -70,3 +70,20 @@
 21:53:27.747 [restartedMain] DEBUG r.l.p.PrerevolutionaryTinderApplication - Running with Spring Boot v3.0.6, Spring v6.0.8
 21:53:27.748 [restartedMain] INFO  r.l.p.PrerevolutionaryTinderApplication - The following 1 profile is active: "default"
 21:53:34.719 [restartedMain] INFO  r.l.p.PrerevolutionaryTinderApplication - Started PrerevolutionaryTinderApplication in 7.477 seconds (process running for 8.349)
+16:12:24.841 [restartedMain] INFO  r.l.p.PrerevolutionaryTinderApplication - Starting PrerevolutionaryTinderApplication using Java 17.0.7 with PID 14328 (E:\IdeaProjects\PrerevolutionaryTinder\serverPart\target\classes started by Radimir in E:\IdeaProjects\PrerevolutionaryTinder)
+16:12:24.845 [restartedMain] DEBUG r.l.p.PrerevolutionaryTinderApplication - Running with Spring Boot v3.0.6, Spring v6.0.8
+16:12:24.847 [restartedMain] INFO  r.l.p.PrerevolutionaryTinderApplication - The following 1 profile is active: "default"
+16:16:36.635 [restartedMain] INFO  r.l.p.PrerevolutionaryTinderApplication - Starting PrerevolutionaryTinderApplication using Java 17.0.7 with PID 6000 (E:\IdeaProjects\PrerevolutionaryTinder\serverPart\target\classes started by Radimir in E:\IdeaProjects\PrerevolutionaryTinder)
+16:16:36.638 [restartedMain] DEBUG r.l.p.PrerevolutionaryTinderApplication - Running with Spring Boot v3.0.6, Spring v6.0.8
+16:16:36.639 [restartedMain] INFO  r.l.p.PrerevolutionaryTinderApplication - The following 1 profile is active: "default"
+16:16:42.109 [restartedMain] INFO  r.l.p.PrerevolutionaryTinderApplication - Started PrerevolutionaryTinderApplication in 5.944 seconds (process running for 6.694)
+16:22:20.785 [restartedMain] INFO  r.l.p.PrerevolutionaryTinderApplication - Starting PrerevolutionaryTinderApplication using Java 17.0.7 with PID 6000 (E:\IdeaProjects\PrerevolutionaryTinder\serverPart\target\classes started by Radimir in E:\IdeaProjects\PrerevolutionaryTinder)
+16:22:20.785 [restartedMain] DEBUG r.l.p.PrerevolutionaryTinderApplication - Running with Spring Boot v3.0.6, Spring v6.0.8
+16:22:20.785 [restartedMain] INFO  r.l.p.PrerevolutionaryTinderApplication - The following 1 profile is active: "default"
+16:22:26.946 [restartedMain] INFO  r.l.p.PrerevolutionaryTinderApplication - Starting PrerevolutionaryTinderApplication using Java 17.0.7 with PID 6000 (E:\IdeaProjects\PrerevolutionaryTinder\serverPart\target\classes started by Radimir in E:\IdeaProjects\PrerevolutionaryTinder)
+16:22:26.948 [restartedMain] DEBUG r.l.p.PrerevolutionaryTinderApplication - Running with Spring Boot v3.0.6, Spring v6.0.8
+16:22:26.949 [restartedMain] INFO  r.l.p.PrerevolutionaryTinderApplication - The following 1 profile is active: "default"
+16:22:30.195 [restartedMain] INFO  r.l.p.PrerevolutionaryTinderApplication - Started PrerevolutionaryTinderApplication in 3.425 seconds (process running for 354.779)
+16:22:38.837 [restartedMain] INFO  r.l.p.PrerevolutionaryTinderApplication - Starting PrerevolutionaryTinderApplication using Java 17.0.7 with PID 9644 (E:\IdeaProjects\PrerevolutionaryTinder\serverPart\target\classes started by Radimir in E:\IdeaProjects\PrerevolutionaryTinder)
+16:22:38.841 [restartedMain] DEBUG r.l.p.PrerevolutionaryTinderApplication - Running with Spring Boot v3.0.6, Spring v6.0.8
+16:22:38.842 [restartedMain] INFO  r.l.p.PrerevolutionaryTinderApplication - The following 1 profile is active: "default"

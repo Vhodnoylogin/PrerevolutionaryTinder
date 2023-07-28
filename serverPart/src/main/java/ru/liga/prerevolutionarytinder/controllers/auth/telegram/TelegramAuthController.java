@@ -13,7 +13,7 @@ import ru.liga.prerevolutionarytinder.servicies.auth.telegram.TelegramRegistrati
 
 @Slf4j
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/api/auth/telegram")
 public class TelegramAuthController {
     private final TelegramRegistrationService telegramRegistrationService;
 

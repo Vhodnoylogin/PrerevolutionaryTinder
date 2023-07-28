@@ -75,12 +75,6 @@
         </dependency>
 
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
             <version>1.5.5.Final</version>
@@ -102,6 +96,7 @@
             <version>8.0.33</version>
         </dependency>
     </dependencies>
+
 
     <build>
         <plugins>
